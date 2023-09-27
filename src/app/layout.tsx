@@ -30,7 +30,7 @@ const anton = localFont({
 export const metadata: Metadata = {
     title: "Erick Larsen - Frontend Developer",
     description:
-        "I'm Erick, a passionate FrontEnd Developer with expertise in React, Redux, Next.js, JavaScript, and UI/UX design.",
+        "Hey what's up! I'm Erick, a passionate FrontEnd Developer with expertise in React, Redux, Next.js, JavaScript, and UI/UX design.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
