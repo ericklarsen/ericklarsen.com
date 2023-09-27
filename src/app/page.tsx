@@ -1,113 +1,169 @@
-import Image from 'next/image'
+"use client";
+
+import { Burger } from "@/assets/svgs/Burger";
+import { Calendar } from "@/assets/svgs/Calendar";
+import { Location } from "@/assets/svgs/Location";
+import Ai from "@/assets/svgs/expertises/Ai";
+import Bun from "@/assets/svgs/expertises/Bun";
+import ExpressIcon from "@/assets/svgs/expertises/ExpressIcon";
+import Figma from "@/assets/svgs/expertises/Figma";
+import MongoDB from "@/assets/svgs/expertises/MongoDB";
+import MySQL from "@/assets/svgs/expertises/MySQL";
+import { Nextjs } from "@/assets/svgs/expertises/Nextjs";
+import NodeJs from "@/assets/svgs/expertises/NodeJs";
+import Php from "@/assets/svgs/expertises/Php";
+import PostgreSQL from "@/assets/svgs/expertises/PostgreSQL";
+import Ps from "@/assets/svgs/expertises/Ps";
+import ReactIcon from "@/assets/svgs/expertises/ReactIcon";
+import Redux from "@/assets/svgs/expertises/Redux";
+import Sass from "@/assets/svgs/expertises/Sass";
+import StyledComponents from "@/assets/svgs/expertises/StyledComponents";
+import Svelte from "@/assets/svgs/expertises/Svelte";
+import Tailwind from "@/assets/svgs/expertises/Tailwind";
+import Typescript from "@/assets/svgs/expertises/Typescript";
+import Image from "next/image";
+
+import "./page.css";
+import Git from "@/assets/svgs/Git";
+import Linkedin from "@/assets/svgs/Linkedin";
+import Instagram from "@/assets/svgs/Instagram";
+import Send from "@/assets/svgs/Send";
+import Blogs from "../assets/svgs/Blogs";
+import DarkMode from "@/components/DarkMode/DarkMode";
+import Navbar from "@/components/Navbar/Navbar";
+import Footer from "@/components/Footer/Footer";
+import MainWrapper from "@/components/MainWrapper/MainWrapper";
+
+const expertises = [
+    {
+        id: "platform",
+        icons: [
+            (key: any, className: string) => <Nextjs key={key} className={className} />,
+            (key: any, className: string) => <ReactIcon key={key} className={className} />,
+            (key: any, className: string) => <Redux key={key} className={className} />,
+            (key: any, className: string) => <Typescript key={key} className={className} />,
+            (key: any, className: string) => <NodeJs key={key} className={className} />,
+            (key: any, className: string) => <Svelte key={key} className={className} />,
+            (key: any, className: string) => <Php key={key} className={className} />,
+            (key: any, className: string) => <ExpressIcon key={key} className={className} />,
+            (key: any, className: string) => <Bun key={key} className={className} />,
+        ],
+    },
+    {
+        id: "styling-and-database",
+        icons: [
+            (key: any, className: string) => <Tailwind key={key} className={className} />,
+            (key: any, className: string) => <StyledComponents key={key} className={className} />,
+            (key: any, className: string) => <Sass key={key} className={className} />,
+            (key: any, className: string) => <MySQL key={key} className={className} />,
+            (key: any, className: string) => <PostgreSQL key={key} className={className} />,
+            (key: any, className: string) => <MongoDB key={key} className={className} />,
+        ],
+    },
+    {
+        id: "additional",
+        icons: [
+            (key: any, className: string) => <Ai key={key} className={className} />,
+            (key: any, className: string) => <Ps key={key} className={className} />,
+            (key: any, className: string) => <Figma key={key} className={className} />,
+        ],
+    },
+];
+
+const experiences = [
+    {
+        title: "Frontend Developer - 2Viz",
+        location: "Frankfurt, Hesse, Germany (Remote)",
+        date: "Apr 2021 - Present",
+        active: true,
+    },
+    {
+        title: "Frontend Developer - Kulina",
+        location: "Jakarta, Indonesia (Remote)",
+        date: "Sep 2020 - Apr 2021",
+        active: false,
+    },
+    {
+        title: "Fullstack Developer - Self Employed",
+        location: "Pekanbaru, Indonesia",
+        date: "Oct 2018 - Sep 2020",
+        active: false,
+    },
+];
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    return (
+        <MainWrapper>
+            <div className="flex flex-wrap md:justify-center gap-10 mt-10">
+                <section id="short-description" className="w-full lg:max-w-[50%]">
+                    <h2 className="font-caveat font-extrabold ">Hey what's up!</h2>
+                    <p className="font-mono mt-4">
+                        I'm Erick, a passionate FrontEnd Developer with expertise in React, Redux,
+                        Next.js, JavaScript, and UI/UX design.
+                        <br />
+                        I'm always ready to embark on new learning adventures and take on exciting
+                        challenges.
+                    </p>
+                    <div className="flex items-center gap-4 mt-4">
+                        <a href="" className="">
+                            <Git />
+                        </a>
+                        <a href="" className="">
+                            <Linkedin />
+                        </a>
+                        <a href="" className="">
+                            <Instagram />
+                        </a>
+                        <a href="" className="">
+                            <Send />
+                        </a>
+                    </div>
+                </section>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+                {/* md:max-w-[21.875rem] */}
+                <section id="experience" className="w-full lg:w-fit ">
+                    <p className="uppercase font-bold tracking-[0.175rem]">Experience</p>
+                    {experiences.map((item, idx) => (
+                        <div key={idx} className="experience__wrapper">
+                            <div
+                                className={`experience__dot ${
+                                    item.active ? "bg-secondary" : "bg-primary opacity-[40%]"
+                                }`}
+                            >
+                                {item.active && (
+                                    <div className="absolute w-full h-full rounded-full bg-secondary animate-ping"></div>
+                                )}
+                            </div>
+                            <div className="flex-1">
+                                <p className="font-medium">{item.title}</p>
+                                <div className="flex gap-1 mt-1">
+                                    <Location className="w-4 h-4 mt-1.5" />
+                                    <p className="text-caption opacity-[65%]">{item.location}</p>
+                                </div>
+                                <div className="flex gap-1 mt-1">
+                                    <Calendar className="w-4 h-4 mt-1.5" />
+                                    <p className="text-caption opacity-[65%]">{item.date}</p>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </section>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+                <section id="expertise" className="w-full">
+                    <h5 className="font-caveat text-center">
+                        "Passionate about collaborating with"
+                    </h5>
+                    <div>
+                        {expertises.map((item, itemIdx) => (
+                            <div key={itemIdx} className="expertise__wrapper">
+                                {item.icons.map((icon, iconIdx) =>
+                                    icon(iconIdx, "expertise__icon")
+                                )}
+                            </div>
+                        ))}
+                    </div>
+                </section>
+            </div>
+        </MainWrapper>
+    );
 }
