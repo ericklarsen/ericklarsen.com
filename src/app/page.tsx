@@ -33,6 +33,7 @@ import DarkMode from "@/components/DarkMode/DarkMode";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import MainWrapper from "@/components/MainWrapper/MainWrapper";
+import Link from "next/link";
 
 const expertises = [
     {
@@ -91,6 +92,25 @@ const experiences = [
     },
 ];
 
+const socials = [
+    {
+        url: "https://github.com/ericklarsen",
+        icon: () => <Git />,
+    },
+    {
+        url: "https://www.linkedin.com/in/ericklarsenn/",
+        icon: () => <Linkedin />,
+    },
+    {
+        url: "https://www.instagram.com/ericklarsenn/",
+        icon: () => <Instagram />,
+    },
+    // {
+    //     url: "mailto:ericklarsenn@gmail.com",
+    //     icon: () => <Send />,
+    // },
+];
+
 export default function Home() {
     return (
         <MainWrapper>
@@ -105,18 +125,11 @@ export default function Home() {
                         challenges.
                     </p>
                     <div className="flex items-center gap-4 mt-4">
-                        <a href="" className="">
-                            <Git />
-                        </a>
-                        <a href="" className="">
-                            <Linkedin />
-                        </a>
-                        <a href="" className="">
-                            <Instagram />
-                        </a>
-                        <a href="" className="">
-                            <Send />
-                        </a>
+                        {socials.map((item, idx) => (
+                            <Link key={idx} href={item.url} target="_blank">
+                                {item.icon()}
+                            </Link>
+                        ))}
                     </div>
                 </section>
 
