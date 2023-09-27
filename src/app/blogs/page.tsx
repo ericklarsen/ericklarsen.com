@@ -7,7 +7,7 @@ export default function Blogs() {
                 <h3 className="font-bold font-sans text-center">Blogs 📝</h3>
 
                 <div className="w-full min-h-[18.75rem] flex items-center justify-center">
-                    <p className="font-mono opacity-50">
+                    <p className="font-mono opacity-50 text-center">
                         We don't have any contents at the moment.
                     </p>
                 </div>

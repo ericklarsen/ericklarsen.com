@@ -6,7 +6,12 @@ const experiments = [
     {
         url: "https://github.com/ericklarsen/SleckMania",
         label: "Sleck - Chatting App",
-        caption: "Build with Nextjs, Socket.io, Tailwind, Express, AuthJWT, PostgreSQL, Docker",
+        caption: "Build with Nextjs, Socket.io, Tailwind, Express, AuthJWT, PostgreSQL and Docker",
+    },
+    {
+        url: "https://github.com/ericklarsen/pokedex-with-sveltekit",
+        label: "Pokedex",
+        caption: "Build with SvelteKit and Tailwind",
     },
 ];
 
@@ -14,7 +19,7 @@ export default function Experiments() {
     return (
         <MainWrapper>
             <div className="w-full max-w-[42.25rem] mx-auto mt-10">
-                <h3 className="font-bold font-sans text-center">Experiments 🔬</h3>
+                <h3 className="font-bold font-sans text-center">Experiments</h3>
 
                 {experiments.map((item, idx) => (
                     <div
