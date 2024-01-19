@@ -73,14 +73,20 @@ const expertises = [
 
 const experiences = [
     {
-        title: "Frontend Developer - 2Viz",
-        location: "Frankfurt, Hesse, Germany (Remote)",
-        date: "Apr 2021 - Present",
+        title: "Senior Developer - 2Viz",
+        location: "Frankfurt, Hesse, Germany - Remote",
+        date: "Jan 2024 - Present",
         active: true,
     },
     {
+        title: "Frontend Developer - 2Viz",
+        location: "Frankfurt, Hesse, Germany - Remote",
+        date: "Apr 2021 - Des 2023",
+        active: false,
+    },
+    {
         title: "Frontend Developer - Kulina",
-        location: "Jakarta, Indonesia (Remote)",
+        location: "Jakarta, Indonesia - Remote",
         date: "Sep 2020 - Apr 2021",
         active: false,
     },
