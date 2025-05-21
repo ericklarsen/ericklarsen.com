@@ -10,6 +10,11 @@ type Props = {};
 
 const menu = [
     {
+        label: "About",
+        url: "/about",
+        icon: () => null,
+    },
+    {
         label: "Experiments",
         url: "/experiments",
         icon: () => <Experiments />,
