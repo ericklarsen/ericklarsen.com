@@ -3,6 +3,7 @@ import Blogs from "@/assets/svgs/Blogs";
 import DarkMode from "../DarkMode/DarkMode";
 import { Burger } from "@/assets/svgs/Burger";
 import Experiments from "@/assets/svgs/Experiments";
+import UserIcon from "@/assets/svgs/UserIcon";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -12,7 +13,7 @@ const menu = [
     {
         label: "About",
         url: "/about",
-        icon: () => null,
+        icon: () => <UserIcon />,
     },
     {
         label: "Experiments",
