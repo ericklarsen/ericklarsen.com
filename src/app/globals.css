@@ -127,3 +127,14 @@ p {
     font-size: var(--text-small);
     color: var(--color-primary);
 }
+
+@keyframes slideIn {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    to {
+        width: 50%;
+        opacity: 1;
+    }
+}
